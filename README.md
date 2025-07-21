@@ -1,6 +1,6 @@
 # 💰 Financial App - Aplikasi Manajemen Keuangan Pribadi
 
-![Screenshot](https://..public/images/screenshot.png)
+![Screenshot](public/images/Screenshot.png)
 
 Aplikasi manajemen keuangan berbasis web yang dibangun dengan **Laravel 10**, **Tailwind CSS 3**, **MySQL**, dan **ApexCharts.js**. Aplikasi ini membantu pengguna untuk melacak pemasukan dan pengeluaran dengan visualisasi data yang interaktif.
 
