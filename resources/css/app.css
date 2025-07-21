@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Transition effects */
+.transition-200 {
+    transition: all 0.2s ease-in-out;
+}
+
+.transition-300 {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Custom focus styles */
+.focus-visible:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
