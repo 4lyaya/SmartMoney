@@ -54,7 +54,7 @@
                                 </td>
                                 <td
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium {{ $transaction->type === 'income' ? 'text-green-600' : 'text-red-600' }}">
-                                    {{ $transaction->type === 'income' ? '+' : '-' }}${{ number_format($transaction->amount, 2) }}
+                                    {{ $transaction->type === 'income' ? '+' : '-' }}{{ formatRupiah($transaction->amount) }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     <div class="flex justify-end space-x-2">
@@ -94,8 +94,61 @@
 
             <!-- Pagination -->
             @if ($transactions->hasPages())
-                <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
-                    {{ $transactions->links() }}
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 mt-6">
+                    {{-- Info --}}
+                    <div class="text-sm text-gray-600">
+                        Menampilkan <span class="font-semibold">{{ $transactions->firstItem() }}</span>
+                        - <span class="font-semibold">{{ $transactions->lastItem() }}</span>
+                        dari <span class="font-semibold">{{ $transactions->total() }}</span> transaksi
+                    </div>
+
+                    {{-- Navigasi --}}
+                    <nav class="inline-flex space-x-1" aria-label="Pagination">
+                        {{-- Tombol Previous --}}
+                        @if ($transactions->onFirstPage())
+                            <span
+                                class="px-3 py-2 text-sm text-gray-400 bg-white border border-gray-300 rounded-md cursor-not-allowed">
+                                &laquo;
+                            </span>
+                        @else
+                            <a href="{{ $transactions->previousPageUrl() }}"
+                                class="px-3 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100">
+                                &laquo;
+                            </a>
+                        @endif
+
+                        {{-- Nomor halaman --}}
+                        @foreach ($transactions->getUrlRange(1, $transactions->lastPage()) as $page => $url)
+                            @if ($page == $transactions->currentPage())
+                                <span
+                                    class="px-3 py-2 text-sm font-bold text-white bg-primary-600 border border-primary-600 rounded-md">
+                                    {{ $page }}
+                                </span>
+                            @elseif ($page == 1 || $page == $transactions->lastPage() || abs($page - $transactions->currentPage()) <= 1)
+                                <a href="{{ $url }}"
+                                    class="px-3 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100">
+                                    {{ $page }}
+                                </a>
+                            @elseif ($page == 2 && $transactions->currentPage() > 4)
+                                <span class="px-2 py-2 text-gray-400">...</span>
+                            @elseif ($page == $transactions->lastPage() - 1 && $transactions->currentPage() < $transactions->lastPage() - 3)
+                                <span class="px-2 py-2 text-gray-400">...</span>
+                            @endif
+                        @endforeach
+
+                        {{-- Tombol Next --}}
+                        @if ($transactions->hasMorePages())
+                            <a href="{{ $transactions->nextPageUrl() }}"
+                                class="px-3 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100">
+                                &raquo;
+                            </a>
+                        @else
+                            <span
+                                class="px-3 py-2 text-sm text-gray-400 bg-white border border-gray-300 rounded-md cursor-not-allowed">
+                                &raquo;
+                            </span>
+                        @endif
+                    </nav>
                 </div>
             @endif
         </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial App - @yield('title')</title>
+    <title>SmartMoney - @yield('title')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/sweet-alert.js'])
 
     <style>
@@ -49,7 +49,7 @@
     <div class="auth-bg">
         <div class="auth-card">
             <div class="auth-header">
-                <h1 class="text-3xl font-bold">Financial App</h1>
+                <h1 class="text-3xl font-bold">SmartMoney</h1>
                 <p class="mt-2 opacity-90">@yield('title')</p>
             </div>
 

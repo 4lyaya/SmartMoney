@@ -51,6 +51,13 @@
                             @yield('submit-button')
                         </button>
                     </div>
+                    <!-- Tombol Kembali -->
+                    <div class="mt-4">
+                        <a href="{{ url()->previous() }}"
+                            class="w-full inline-flex justify-center items-center py-3 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition duration-200">
+                            ← Kembali
+                        </a>
+                    </div>
                 </form>
             </div>
         </div>

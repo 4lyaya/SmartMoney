@@ -1,10 +1,15 @@
-# 💰 Financial App - Aplikasi Manajemen Keuangan Pribadi
+# 💰 SmartMoney - Aplikasi Manajemen Keuangan Pribadi
 
 ![Screenshot](public/images/Screenshot.png)
 
-Aplikasi manajemen keuangan berbasis web yang dibangun dengan **Laravel 10**, **Tailwind CSS 3**, **MySQL**, dan **ApexCharts.js**. Aplikasi ini membantu pengguna untuk melacak pemasukan dan pengeluaran dengan visualisasi data yang interaktif.
+## 💼 Aplikasi Manajemen Keuangan Pribadi
+
+Aplikasi manajemen keuangan berbasis web yang dibangun dengan teknologi modern seperti Laravel, Tailwind CSS, MySQL, dan ApexCharts.js.  
+Membantu pengguna untuk melacak pemasukan dan pengeluaran secara efisien dengan visualisasi data yang interaktif dan responsif.
 
 ---
+[![My Tech Stack](https://skillicons.dev/icons?i=laravel,tailwind,mysql,chartdotjs)](https://skillicons.dev)
+
 
 ## ✨ Fitur Utama
 

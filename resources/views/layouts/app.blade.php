@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial App - @yield('title')</title>
+    <title>SmartMoney - @yield('title')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/sweet-alert.js'])
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
@@ -19,7 +19,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                Financial App
+                SmartMoney
             </a>
             <div class="flex items-center space-x-4">
                 @auth
