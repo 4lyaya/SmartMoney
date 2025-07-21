@@ -4,11 +4,11 @@
 
 ## 💼 Aplikasi Manajemen Keuangan Pribadi
 
-Aplikasi manajemen keuangan berbasis web yang dibangun dengan teknologi modern seperti Laravel, Tailwind CSS, MySQL, dan ApexCharts.js.  
+Aplikasi manajemen keuangan berbasis web yang dibangun dengan teknologi modern seperti Laravel, Tailwind CSS, MySQL, dan ApexCharts.js.
 Membantu pengguna untuk melacak pemasukan dan pengeluaran secara efisien dengan visualisasi data yang interaktif dan responsif.
 
 ---
-[![My Tech Stack](https://skillicons.dev/icons?i=laravel,tailwind,mysql,chartdotjs)](https://skillicons.dev)
+[![Tech Stack](https://skillicons.dev/icons?i=laravel,tailwind,mysql,chartdotjs)](https://skillicons.dev)
 
 
 ## ✨ Fitur Utama
